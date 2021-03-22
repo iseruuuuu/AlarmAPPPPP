@@ -13,6 +13,11 @@
 		9407FEBC25AA965700C59871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9407FEBA25AA965700C59871 /* Main.storyboard */; };
 		9407FEBE25AA965800C59871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9407FEBD25AA965800C59871 /* Assets.xcassets */; };
 		9407FEC125AA965800C59871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9407FEBF25AA965800C59871 /* LaunchScreen.storyboard */; };
+		940D955826058820009FCC32 /* ii.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 940D95572605881F009FCC32 /* ii.jpeg */; };
+		94201AE12604335D005D6DBC /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94201AE02604335D005D6DBC /* ShakeViewController.swift */; };
+		94201AE4260444F0005D6DBC /* i.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94201AE3260444F0005D6DBC /* i.jpg */; };
+		942167822607692E009D2C76 /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 942167812607692E009D2C76 /* sample2.mp3 */; };
+		94A651F52606E0620086965F /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94A651F42606E0620086965F /* sample.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		9407FEBD25AA965800C59871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9407FEC025AA965800C59871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9407FEC225AA965800C59871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		940D95572605881F009FCC32 /* ii.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ii.jpeg; sourceTree = "<group>"; };
+		94201AE02604335D005D6DBC /* ShakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
+		94201AE3260444F0005D6DBC /* i.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = i.jpg; sourceTree = "<group>"; };
+		942167812607692E009D2C76 /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
+		94A651F42606E0620086965F /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +69,14 @@
 				9407FEB425AA965700C59871 /* AppDelegate.swift */,
 				9407FEB625AA965700C59871 /* SceneDelegate.swift */,
 				9407FEB825AA965700C59871 /* ViewController.swift */,
+				94201AE02604335D005D6DBC /* ShakeViewController.swift */,
+				94201AE3260444F0005D6DBC /* i.jpg */,
+				94A651F42606E0620086965F /* sample.mp3 */,
+				942167812607692E009D2C76 /* sample2.mp3 */,
+				940D95572605881F009FCC32 /* ii.jpeg */,
 				9407FEBA25AA965700C59871 /* Main.storyboard */,
-				9407FEBD25AA965800C59871 /* Assets.xcassets */,
 				9407FEBF25AA965800C59871 /* LaunchScreen.storyboard */,
+				9407FEBD25AA965800C59871 /* Assets.xcassets */,
 				9407FEC225AA965800C59871 /* Info.plist */,
 			);
 			path = AlarmAPP_new2;
@@ -125,7 +140,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9407FEC125AA965800C59871 /* LaunchScreen.storyboard in Resources */,
+				94201AE4260444F0005D6DBC /* i.jpg in Resources */,
+				942167822607692E009D2C76 /* sample2.mp3 in Resources */,
+				94A651F52606E0620086965F /* sample.mp3 in Resources */,
 				9407FEBE25AA965800C59871 /* Assets.xcassets in Resources */,
+				940D955826058820009FCC32 /* ii.jpeg in Resources */,
 				9407FEBC25AA965700C59871 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +159,7 @@
 				9407FEB925AA965700C59871 /* ViewController.swift in Sources */,
 				9407FEB525AA965700C59871 /* AppDelegate.swift in Sources */,
 				9407FEB725AA965700C59871 /* SceneDelegate.swift in Sources */,
+				94201AE12604335D005D6DBC /* ShakeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Iseryuiseki.AlarmAPP-new2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Iseryuiseki.AlarmAPP-new2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

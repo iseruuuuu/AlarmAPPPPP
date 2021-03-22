@@ -1,24 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlarmAPP_new2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFw-d8-GZE">
+                                <rect key="frame" x="0.0" y="144" width="414" height="276"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="LCC-FE-WOU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="276"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="eHh-au-2kd"/>
+                                            <constraint firstAttribute="height" constant="276" id="nop-y6-5ge"/>
+                                        </constraints>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                            <!--1970-01-01 11:00:00 +0000-->
+                                        </date>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                            <!--2037-12-31 11:00:00 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="ja"/>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="LCC-FE-WOU" secondAttribute="bottom" id="HR9-mB-sxe"/>
+                                    <constraint firstAttribute="trailing" secondItem="LCC-FE-WOU" secondAttribute="trailing" id="SF7-kJ-Gtd"/>
+                                    <constraint firstAttribute="height" constant="276" id="alC-xV-Pj3"/>
+                                    <constraint firstItem="LCC-FE-WOU" firstAttribute="leading" secondItem="lFw-d8-GZE" secondAttribute="leading" id="bVh-Qb-Ef0"/>
+                                    <constraint firstItem="LCC-FE-WOU" firstAttribute="top" secondItem="lFw-d8-GZE" secondAttribute="top" id="eTl-8y-mER"/>
+                                    <constraint firstAttribute="width" constant="414" id="pBc-5I-dq8"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4d-nl-gsv">
+                                <rect key="frame" x="37" y="620" width="341" height="78"/>
+                                <color key="backgroundColor" red="0.8826911449432373" green="0.29883408546447754" blue="0.058690659701824188" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="6fd-SK-LDV"/>
+                                    <constraint firstAttribute="width" constant="341" id="ZwM-fx-beJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="起床時間を設定する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WmH-8a-frU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW2-Vy-FsL">
+                                <rect key="frame" x="86" y="758" width="241" height="84"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="7uD-cs-rxX"/>
+                                    <constraint firstAttribute="height" constant="84" id="Hvm-az-p5c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="通知を止める">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Buz-pA-1Ke"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.048220790922641754" green="0.043773286044597626" blue="0.13417762517929077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lFw-d8-GZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4OK-jV-w4s"/>
+                            <constraint firstItem="GW2-Vy-FsL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="56S-Yd-Ofu"/>
+                            <constraint firstItem="lFw-d8-GZE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BiB-3k-UzJ"/>
+                            <constraint firstItem="lFw-d8-GZE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FUP-f1-1ob"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g4d-nl-gsv" secondAttribute="trailing" constant="36" id="GeU-Ob-tfP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GW2-Vy-FsL" secondAttribute="trailing" constant="87" id="OBe-3S-anF"/>
+                            <constraint firstItem="GW2-Vy-FsL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="OoJ-x7-V3b"/>
+                            <constraint firstItem="GW2-Vy-FsL" firstAttribute="top" secondItem="g4d-nl-gsv" secondAttribute="bottom" constant="60" id="Vfd-a2-yTG"/>
+                            <constraint firstItem="g4d-nl-gsv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="iig-Dh-adI"/>
+                            <constraint firstItem="lFw-d8-GZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nis-B0-uVg"/>
+                            <constraint firstItem="lFw-d8-GZE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="oDb-35-DIL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="g4d-nl-gsv" id="tWS-Xp-nS8"/>
+                        <outlet property="datePicker" destination="LCC-FE-WOU" id="jjq-RC-sMb"/>
+                        <outlet property="stopButton" destination="GW2-Vy-FsL" id="Put-DD-HoC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="67.633928571428569"/>
+        </scene>
+        <!--Shake View Controller-->
+        <scene sceneID="4NO-bb-lAD">
+            <objects>
+                <viewController storyboardIdentifier="next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sYe-qR-vgt" customClass="ShakeViewController" customModule="AlarmAPP_new2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xwg-8v-0gl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あと　20回" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXj-h8-8WI">
+                                <rect key="frame" x="20" y="463" width="374" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="1Vq-0b-ijM"/>
+                                    <constraint firstAttribute="height" constant="99" id="Lif-O2-G5M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知を止める" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4p-53-WXz">
+                                <rect key="frame" x="68" y="84" width="278" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="5sH-oO-hwO"/>
+                                    <constraint firstAttribute="width" constant="278" id="YND-EY-wCQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bK5-Zt-Xoq"/>
+                        <color key="backgroundColor" red="0.025776198133826256" green="0.57631134986877441" blue="0.95743125677108765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bK5-Zt-Xoq" firstAttribute="trailing" secondItem="K4p-53-WXz" secondAttribute="trailing" constant="68" id="5D2-Hj-75Z"/>
+                            <constraint firstItem="bK5-Zt-Xoq" firstAttribute="trailing" secondItem="fXj-h8-8WI" secondAttribute="trailing" constant="20" id="6Vb-b4-GbM"/>
+                            <constraint firstItem="K4p-53-WXz" firstAttribute="leading" secondItem="bK5-Zt-Xoq" secondAttribute="leading" constant="68" id="EPj-NF-3JL"/>
+                            <constraint firstItem="bK5-Zt-Xoq" firstAttribute="bottom" secondItem="fXj-h8-8WI" secondAttribute="bottom" constant="300" id="I5q-gM-5u8"/>
+                            <constraint firstItem="K4p-53-WXz" firstAttribute="top" secondItem="bK5-Zt-Xoq" secondAttribute="top" constant="40" id="gyi-a4-TLx"/>
+                            <constraint firstItem="fXj-h8-8WI" firstAttribute="leading" secondItem="bK5-Zt-Xoq" secondAttribute="leading" constant="20" id="wWK-CS-RKb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eZa-jY-jYh"/>
+                    <connections>
+                        <outlet property="label" destination="fXj-h8-8WI" id="rqi-7f-ivy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5X-jX-OtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.79710144927537" y="67.633928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
